@@ -6,18 +6,6 @@ resource "aws_s3_bucket" "dl" {
     IES   = "IGTI",
     CURSO = "EDC"
   }
-  
-}
-
-
-resource "aws_s3_bucket" "stream" {
-  bucket = "datalake-sesson-edc-tf"
-  acl    = "private"
-
-  tags = {
-    IES   = "IGTI",
-    CURSO = "EDC"
-  }
 
   server_side_encryption_configuration {
     rule {
