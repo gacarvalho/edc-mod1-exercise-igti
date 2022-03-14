@@ -1,8 +1,17 @@
 resource "aws_s3_bucket" "dl" {
-  bucket = "datalake-sesson-edc-tf"
+	bucket = "datalake-sesson-edc-tf"
 
-  tags = {
-    IES   = "SESSON",
-    CURSO = "EDC"
-  }
+	tags = {
+		IES   = "SESSON",
+		CURSO = "EDC"
+	}
+}
+
+source "aws_s3_bucket" "stream" {
+	bucket = "bucket-sesson-streaming"
+	acl    = "private"
+
+	tags = {
+		SESSON = "EDC"
+	}
 }
