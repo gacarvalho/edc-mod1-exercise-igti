@@ -13,8 +13,8 @@ resource "aws_glue_crawler" "stream" {
 
   configuration = <<EOF
 {
-   "Version": 1.0,
-   "Grouping": {
+  "Version": 1.0,
+  "Grouping": {
       "TableGroupingPolicy": "CombineCompatibleSchemas" }
 }
 EOF
