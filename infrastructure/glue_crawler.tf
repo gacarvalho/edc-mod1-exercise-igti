@@ -20,6 +20,7 @@ resource "aws_glue_crawler" "stream" {
 EOF
 
   tags = {
-    SESSON = "EDC"
+    IES   = "IGTI",
+    CURSO = "EDC"
   }
 }
