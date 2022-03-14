@@ -3,7 +3,8 @@ resource "aws_cloudwatch_log_group" "firehose" {
   retention_in_days = 1
 
   tags = {
-    SESSON = "EDC"
+    IES   = "IGTI"
+    CURSO = "EDC"
   }
 }
 
