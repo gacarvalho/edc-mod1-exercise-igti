@@ -131,7 +131,7 @@ resource "aws_iam_role_policy_attachment" "lambda_attach" {
 ###############
 
 resource "aws_iam_role" "glue_role" {
-  name = "IGTIGlueCrawlerRole"
+  name = "SESSONGlueCrawlerRole"
 
   assume_role_policy = <<EOF
 {
