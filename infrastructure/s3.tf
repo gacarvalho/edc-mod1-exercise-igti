@@ -7,7 +7,7 @@ resource "aws_s3_bucket" "dl" {
 	}
 }
 
-source "aws_s3_bucket" "stream" {
+resource "aws_s3_bucket" "stream" {
 	bucket = "bucket-sesson-streaming"
 	acl    = "private"
 
