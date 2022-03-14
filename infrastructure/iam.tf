@@ -113,8 +113,8 @@ resource "aws_iam_policy" "firehose" {
                 "s3:PutObject"
             ],
             "Resource": [
-              "${aws_s3_bucket.stream.arn}",
-              "${aws_s3_bucket.stream.arn}/*"
+              "${aws_s3_bucket.streaming.arn}",
+              "${aws_s3_bucket.streaming.arn}/*"
             ]
         }
     ]
