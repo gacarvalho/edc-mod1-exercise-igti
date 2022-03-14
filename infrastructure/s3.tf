@@ -7,7 +7,7 @@ resource "aws_s3_bucket" "dl" {
 	}
 }
 
-resource "aws_s3_bucket" "streaming" {
+resource "aws_s3_bucket" "stream" {
 	bucket = "bucket-sesson-streaming-aws"
 
 	tags = {
