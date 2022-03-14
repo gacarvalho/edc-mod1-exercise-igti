@@ -74,15 +74,16 @@ resource "aws_iam_role_policy_attachment" "lambda_attach" {
   policy_arn = aws_iam_policy.lambda.arn
 }
 
+
+
 #############
-## KINESIS ## 
+## KINESIS ##
 #############
 
  resource "aws_iam_policy" "firehose" {
-   name        = "SESSONFirehosePolicy"
+   name        = "IGTIFirehosePolicy"
    path        = "/"
    description = "Provides write permissions to CloudWatch Logs and S3"
-
    policy = <<EOF
  {
      "Version": "2012-10-17",
@@ -126,12 +127,13 @@ resource "aws_iam_role_policy_attachment" "lambda_attach" {
    policy_arn = aws_iam_policy.firehose.arn
  }
 
+
 ###############
 ## GLUE ROLE ##
 ###############
 
 resource "aws_iam_role" "glue_role" {
-  name = "SESSONGlueCrawlerRole"
+  name = "IGTIGlueCrawlerRole"
 
   assume_role_policy = <<EOF
 {
@@ -150,6 +152,7 @@ resource "aws_iam_role" "glue_role" {
 EOF
 
   tags = {
+    IES = "IGTI"
     CURSO = "EDC"
   }
 
@@ -157,7 +160,7 @@ EOF
 
 
 resource "aws_iam_policy" "glue_policy" {
-  name        = "SESSONAWSGlueServiceRole"
+  name        = "IGTIAWSGlueServiceRole"
   path        = "/"
   description = "Policy for AWS Glue service role which allows access to related services including EC2, S3, and Cloudwatch Logs"
 
