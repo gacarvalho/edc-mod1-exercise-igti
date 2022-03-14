@@ -8,9 +8,9 @@ resource "aws_s3_bucket" "dl" {
 }
 
 resource "aws_s3_bucket" "stream" {
-	bucket = "bucket-sesson-streaming"
+	bucket = "igti-ney-streaming-bucket"
 
 	tags = {
-		SESSON = "EDC"
+		CURSO = "EDC"
 	}
 }
