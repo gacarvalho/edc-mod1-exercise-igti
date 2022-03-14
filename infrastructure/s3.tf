@@ -14,3 +14,12 @@ resource "aws_s3_bucket" "stream" {
 		SESSON = "EDC"
 	}
 }
+
+
+resource "aws_s3_bucket" "stream" {
+	bucket = "igti-ney-streaming-bucket"
+
+	tags = {
+		CURSO = "EDC"
+	}
+}
