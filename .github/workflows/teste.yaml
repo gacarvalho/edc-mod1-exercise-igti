@@ -24,6 +24,7 @@ jobs:
       uses: aws-actions/configure-aws-credentials@v1
       with:
 <<<<<<< HEAD
+<<<<<<< HEAD
           aws-access-key-id: ${{ secrets.AWS_SECRET_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-2
@@ -34,6 +35,14 @@ jobs:
           
       - name: IaC Apply
         env:
+=======
+        aws-access-key-id: ${{ secrets.AWS_SECRET_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: us-east-2
+
+    - name: IaC Apply
+      env:
+>>>>>>> b9c67797180a7b812e13766cfa0c8c497799f4ff
 =======
         aws-access-key-id: ${{ secrets.AWS_SECRET_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
