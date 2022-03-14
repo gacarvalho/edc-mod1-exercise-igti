@@ -8,7 +8,7 @@ resource "aws_s3_bucket" "dl" {
 }
 
 resource "aws_s3_bucket" "stream" {
-	bucket = "bucket-sesson-streaming"
+	bucket = "bucket-sesson-streaming-aws"
 
 	tags = {
 		IES   = "IGTI",
