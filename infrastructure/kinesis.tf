@@ -1,5 +1,5 @@
  resource "aws_kinesis_firehose_delivery_stream" "extended_s3_stream" {
-   name        = "sesson-kinesis-firehose-s3-stream"
+   name        = "igti-kinesis-firehose-s3-stream"
    destination = "extended_s3"
 
    extended_s3_configuration {
@@ -20,7 +20,7 @@
 
 
  resource "aws_iam_role" "firehose_role" {
-   name = "SESSON_firehose_role"
+   name = "IGTI_firehose_role"
 
    assume_role_policy = <<EOF
  {

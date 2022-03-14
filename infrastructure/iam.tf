@@ -80,10 +80,12 @@ resource "aws_iam_role_policy_attachment" "lambda_attach" {
 ## KINESIS ##
 #############
 
+
  resource "aws_iam_policy" "firehose" {
    name        = "IGTIFirehosePolicy"
    path        = "/"
    description = "Provides write permissions to CloudWatch Logs and S3"
+
    policy = <<EOF
  {
      "Version": "2012-10-17",
@@ -126,6 +128,7 @@ resource "aws_iam_role_policy_attachment" "lambda_attach" {
    role       = aws_iam_role.firehose_role.name
    policy_arn = aws_iam_policy.firehose.arn
  }
+
 
 
 ###############
