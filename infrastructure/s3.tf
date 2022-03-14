@@ -9,7 +9,6 @@ resource "aws_s3_bucket" "dl" {
 
 resource "aws_s3_bucket" "stream" {
 	bucket = "bucket-sesson-streaming"
-	acl    = "private"
 
 	tags = {
 		IES   = "IGTI",
